@@ -1,0 +1,10 @@
+.card-img-overlay{
+  padding: 0;
+  margin: 0;
+  top: calc(50% - 0.5rem);
+  text-align: center;
+  font-weight: bold;
+}
+body{
+  height: 1400px;
+}
