@@ -1,10 +1,416 @@
-.card-img-overlay{
+/* common */
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  height: 2000px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 60px;
+}
+.profile h1,.skill h1,
+.WORKS h1, .contact h1 {
+  font-size: 30px;
+}
+
+/* header */
+.layer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* 背景画像の読み込み */
+.layer-bg{
+  background: url(../img/macbook.png) no-repeat 0 0;
+  background-size: cover;
+  background-position:center center; 
+  width: 100%;
+  height: 70vh;
+}
+
+/* 重ねる文字の基本設定 */
+.layer-txt{
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  color: #fff;
+  letter-spacing: 0.4rem;
+}
+
+header h1 {
+  font-size: 50px;
+  margin: 0;
+}
+header p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* icon  */
+
+.sp-menu {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  margin-left: auto;
+}
+
+.sp-menu #open {
+  padding: 10px;
+  background: rgba(80, 80, 80, 0.3);
+  font-size: 26px;
+  cursor: pointer;
+  border-radius: 15%;
+}
+
+.sp-menu #open:hover {
+  background: rgba(80, 80, 80, 0.8);
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+/* overlay */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(80, 80, 80, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .7s;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  font-size: 24px;
+  margin-top: 32px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay li a:hover {
+  opacity: 0.5;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .15s;
+}
+.overlay.show li:nth-child(2) {
+  transition-delay: .30s;
+}
+.overlay.show li:nth-child(3) {
+  transition-delay: .45s;
+}
+.overlay.show li:nth-child(4) {
+  transition-delay: .60s;
+}
+.overlay.show li:nth-child(5) {
+  transition-delay: .75s;
+}
+
+/* container */
+
+/* portfolio */
+.profile {
+  padding: 60px 80px;
+}
+.profile h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+.profile p {
+  font-size: 16px;
+  padding: 0;
+}
+
+.profile ul {
+  list-style-type: none;
   padding: 0;
   margin: 0;
-  top: calc(50% - 0.5rem);
+}
+
+.profile li {
+  margin: 0 auto;
   text-align: center;
+  padding: 10px;
+}
+.profile li img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+/* skill */
+
+/* .skill {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 40px 80px;
+  text-align: center;
+  background-color: lightgray;
+}
+
+.skill h1 {
+  padding-bottom: 40px;
+}
+.skill h2 {
+  text-align: center;
+}
+
+.skill ul {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.skill li {
+  width: calc((100% - 20%) / 2);
+  display: block;
+}
+
+.skill li img {
+  width: 100%;
+}
+.skill li #rails {
+  padding-top: 50px;
+} */
+
+.containerskill {
+  background-color: lightgray;
+}
+
+.skill {
+  padding: 40px 0;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  max-width: 360px;
+  text-align: center;
+}
+
+.skill h1 {
+  padding-bottom: 20px;
+}
+
+.skill ul {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.skill li {
+  width: calc((100% - 16px) / 2);
+}
+
+.skill li img {
+  width: 100%;
+}
+
+.skill li h2 {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+#rails {
+  padding-top: 50px;
+}
+
+/* works */
+
+.WORKS {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.WORKS h1 {
+  text-align: center;
+  height: 400px;
+  background-color: rgb(165, 165, 255);
+  margin: 0;
+  padding: 40px;
+}
+
+/* contact */
+.containercontact {
+  background-color: lightgray;
+}
+.contact {
+  margin: 0;
+  padding: 40px;
+  height: 300px;
+  text-align: center;
+}
+
+.contact li {
+  margin: 0;
+  padding: 10px;
+}
+
+#email {
   font-weight: bold;
 }
-body{
-  height: 1400px;
+
+/* footer */
+
+#footer{
+  background:#333;
+  padding:20px;
+  color: white;
+  text-align: center;
+}
+
+
+
+/* スマホ向けの設定 */
+@media (max-width: 650px) {
+  /* h1 {
+    font-size: 50px;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    opacity: 0.8;
+  } */
+}
+
+/* ipad向けの設定 */
+@media (min-width: 651px) and (max-width: 1000px) {
+  h1 {
+    font-size: 75px;
+    margin: 0;
+  }
+  .profile h1,.skill h1,
+  .WORKS h1, .contact h1 {
+    font-size: 50px;
+  }
+  p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 32px;
+  }
+  .layer-bg{
+    background: url(../img/macbook.png) no-repeat 0 0;
+    background-size: cover;
+    background-position:center center; 
+    width: 100%;
+    height: 85vh;
+  }
+
+  .contact {
+    height: 290px;
+  }
+  .contact h1{
+    padding-bottom: 20px;
+  }
+  .contact p {
+    font-size: 22px;
+  }
+}
+
+
+/* pc向けの設定 */
+@media (min-width: 1001px) {
+  h1 {
+    font-size: 130px;
+    margin: 0;
+  }
+
+  .profile h1,.skill h1,
+  .WORKS h1, .contact h1 {
+    font-size: 80px;
+  }
+
+  p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 40px;
+  }
+  .layer-bg{
+    background: url(../img/macbook.png) no-repeat 0 0;
+    background-size: cover;
+    background-position:center center; 
+    width: 100%;
+    height: 100vh;
+  }
+
+  .skill {
+    padding: 40px 0;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .skill li {
+    width: calc((100% - 32px) / 3);
+  }
+  #javascript {
+    padding-top: 45px;
+  }
+  .js {
+    padding-top: 20px;
+  }
+  .rm {
+    padding-top: 50px;
+  }
+
+  .contact {
+    height: 350px;
+  }
+  .contact h1 {
+    padding-bottom: 30px;
+  }
+  .contact p {
+    font-size: 26px;
+  }
+  #email {
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
