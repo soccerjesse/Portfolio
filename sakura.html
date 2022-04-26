@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/sakura.css">
 </head>
 <body>
-  <div class="header">
+  <div class="header"  id="top">
     <div class="layer layer-bg">
       <div class="layer-txt">
         <h1>Portfolio</h1>
@@ -25,11 +25,11 @@
       <span class="material-icons" id="close">close</span>
       <nav>
         <ul>
-          <li><a href="sakura.html" style="color: black;">TOP</a></li>
-          <li><a href="#" style="color: black;">PROFILE</a></li>
-          <li><a href="#" style="color: black;">SKILL</a></li>
-          <li><a href="#" style="color: black;">WORKS</a></li>
-          <li><a href="#" style="color: black;">CONTENT</a></li>
+          <li><a href="#top" style="color: black;">TOP</a></li>
+          <li><a href="#pro" style="color: black;">PROFILE</a></li>
+          <li><a href="#ski" style="color: black;">SKILL</a></li>
+          <li><a href="#wor" style="color: black;">WORKS</a></li>
+          <li><a href="#con" style="color: black;">CONTENT</a></li>
         </ul>
       </nav>
     </div>
@@ -37,20 +37,24 @@
 
   <div class="container">
     <div class="profile">
-      <h1>PROFILE</h1>
+      <h1 id="pro">PROFILE</h1>
       <ul>
         <li>
           <img src="img/lastprofile.jpg" alt="">
         </li>
         <li>
           <div class="pro img2">
-            <p>氏名：佐藤 勲（さとう いさお）</p>
-            <p>居住地：神奈川県横浜市</p>
-            <p>
-              ポートフォリオをご覧いただきありがとうございます。<br>
-              日々プログラミングのスキルアップに勤しんでいる24歳です。<br>
-              サッカーと漫画が大好き‼️ 最近は実家で飼っている豆柴と公園に行くことが多いです。
-            </p>
+            
+            <ul>
+              <li>氏名：佐藤 勲（さとう いさお）</li>
+              <li>居住地：神奈川県横浜市</li>
+              <li>
+                ポートフォリオをご覧いただきありがとうございます。<br>
+                日々プログラミングのスキルアップに勤しんでいる24歳です。<br>
+                サッカーと漫画が大好き‼️ 最近は実家で飼っている豆柴と公園に行くことが多いです。
+              </li>
+              <li><a href="https://github.com/soccerjesse">github</a></li>
+            </ul>
           </div>
         </li>
       </ul>
@@ -59,7 +63,7 @@
 
   <div class="containerskill">
     <div class="skill">
-      <h1>SKILL</h1>
+      <h1 id="ski">SKILL</h1>
       <ul>
         <li>
             <img src="img/html-5.svg" alt="HTML5">
@@ -89,56 +93,66 @@
     </div>
   </div>
 
-  <div class="WORKS"><h1>WORKS</h1></div>
-  <!-- <div class="containerworks">
-    <div class="works">
-      <h1>WORKS</h1>
+  <div class="containerworks">
+    <div class="WORKS">
+      <h1 id="wor">WORKS</h1>
       <ul>
         <li>
-            <img src="img/html-5.svg" alt="HTML5">
-            <h2>HTML5</h2>
+            <a href="https://github.com/soccerjesse/Portfolio"><img src="img/jesse.png" alt="Portfolio"></a>
+            <h2>ポートフォリオ</h2>
+            <h5>使用スキル</h5>
+            <h5>html/css/javascript</h5>
         </li>
         <li>
-            <img src="img/css-3.svg" alt="css">
-            <h2>CSS</h2>
+            <a href="https://github.com/soccerjesse/sample_app"><img src="img/sample.png" alt="sample"></a>
+            <h2>rails_tutorial</h2>
+            <h5>使用スキル</h5>
+            <h5>ruby/Rails/minitest</h5>
         </li>
         <li>
-            <img src="img/javascript.svg" alt="javascript">
-            <h2>JavaScipt</h2>
+            <a href="https://github.com/soccerjesse/Task_app"><img src="img/task.png" alt="task" ></a>
+            <h2>タスク管理</h2>
+            <h5>使用スキル</h5>
+            <h5>ruby/Rails/rspec/slim</h5>
         </li>
         <li>
-            <img src="img/ruby.svg" alt="ruby">
-            <h2>Ruby</h2>
-        </li>
-        <li class="rails">
-            <img src="img/rails.svg" alt="rails" id="rails">
-            <h2>Ruby on Rails</h2>
+            <a href="https://github.com/soccerjesse/recipegram"><img src="img/recipes.png" alt="ruby"></a>
+            <h2>レシピapp</h2>
+            <h5>使用スキル</h5>
+            <h5>ruby/Rails</h5>
         </li>
         <li>
-            <img src="img/mysql.svg" alt="mysql">
-            <h2>MySQL</h2>
+            <a href="https://github.com/soccerjesse/review_app"><img src="img/review.png" alt="good"></a>
+            <h2>カフェレビュー</h2>
+            <h5>使用スキル</h5>
+            <h5>ruby/Rails</h5>
+        </li>
+        <li>
+            <a href="https://github.com/soccerjesse/follow_app"><img src="img/follow.png" alt="follow"></a>
+            <h2>フォロー機能</h2>
+            <h5>使用スキル</h5>
+            <h5>ruby/Rails/relation</h5>
         </li>
       </ul>
     </div>
-  </div> -->
+  </div>
 
   <div class="containercontact">
     <div class="contact">
-      <h1>CONTACT</h1>
-      <p>仕事の依頼・ご相談など メールまたはツイッターDMでご連絡ください。</p>
+      <h1 id="con">CONTACT</h1>
       <ul>
+        <li>仕事の依頼・ご相談など メールまたはツイッターDMでご連絡ください。</li>
         <li id="email">jesse@gmail.com</li>
         <li>or</li>
-        <li><a href="#"><img src="img/twitter.svg" alt="twitter" style="width: 100px;"></a></li>
+        <li><a href="https://twitter.com/JesseSato9"><img src="img/twitter.svg" alt="twitter" style="width: 100px;" id="twicon"></a></li>
       </ul>
     </div>
   </div>
 
   <footer id="footer">
-    <small>&copy; Jesse Sato 2022/4/17 </small>
+    <small>&copy; Jesse Sato 2022/4/26 </small>
   </footer>
 
   <script src="js/sakura.js"></script>
-
 </body>
 </html>

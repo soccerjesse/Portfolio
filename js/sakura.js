@@ -13,4 +13,9 @@
     overlay.classList.remove('show');
     open.classList.remove('hide');
   });
+
+  overlay.addEventListener('click', () => {
+    overlay.classList.remove('show');
+    open.classList.remove('hide');
+  });
 }

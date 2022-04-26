@@ -194,26 +194,22 @@ header p {
   text-align: center;
   background-color: lightgray;
 }
-
 .skill h1 {
   padding-bottom: 40px;
 }
 .skill h2 {
   text-align: center;
 }
-
 .skill ul {
   margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
 }
-
 .skill li {
   width: calc((100% - 20%) / 2);
   display: block;
 }
-
 .skill li img {
   width: 100%;
 }
@@ -222,7 +218,7 @@ header p {
 } */
 
 .containerskill {
-  background-color: lightgray;
+  background-color: rgb(236, 236, 236);
 }
 
 .skill {
@@ -263,22 +259,52 @@ header p {
 
 /* works */
 
+.containerworks {
+  background-color: lightgray;
+}
+
 .WORKS {
+  padding: 40px 0;
+  width: calc(100% - 32px);
   margin: 0 auto;
-  padding: 0;
+  max-width: 360px;
+  text-align: center;
 }
 
 .WORKS h1 {
-  text-align: center;
-  height: 400px;
-  background-color: rgb(165, 165, 255);
-  margin: 0;
-  padding: 40px;
+  padding-bottom: 20px;
+}
+
+.WORKS ul {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.WORKS li {
+  width: calc((100% - 16px) / 1);
+}
+
+.WORKS li img {
+  width: 100%;
+}
+
+.WORKS li h2 {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.WORKS a {
+  transition: 1.0s;
+}
+.WORKS a:hover {
+  opacity: .5;
 }
 
 /* contact */
 .containercontact {
-  background-color: lightgray;
+  background-color: rgb(236, 236, 236);
 }
 .contact {
   margin: 0;
@@ -296,6 +322,17 @@ header p {
   font-weight: bold;
 }
 
+#twicon
+
+#twicon {
+  height: auto;
+  transition: transform 1.7s ease;
+  width: 100%;
+}
+#twicon:hover {
+  transform: scale(1.2);
+}
+
 /* footer */
 
 #footer{
@@ -305,19 +342,6 @@ header p {
   text-align: center;
 }
 
-
-
-/* スマホ向けの設定 */
-@media (max-width: 650px) {
-  /* h1 {
-    font-size: 50px;
-    margin: 0;
-  }
-  p {
-    margin: 0;
-    opacity: 0.8;
-  } */
-}
 
 /* ipad向けの設定 */
 @media (min-width: 651px) and (max-width: 1000px) {
@@ -340,6 +364,18 @@ header p {
     background-position:center center; 
     width: 100%;
     height: 85vh;
+  }
+
+  .WORKS {
+    padding: 40px 0;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .WORKS li {
+    width: calc((100% - 32px) / 2);
   }
 
   .contact {
@@ -390,6 +426,19 @@ header p {
   .skill li {
     width: calc((100% - 32px) / 3);
   }
+
+  .WORKS {
+    padding: 40px 0;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    max-width: 950px;
+    text-align: center;
+  }
+
+  .WORKS li {
+    width: calc((100% - 32px) / 3);
+  }
+
   #javascript {
     padding-top: 45px;
   }
